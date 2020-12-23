@@ -1,0 +1,108 @@
+[debug] [2020-12-23T00:52:01.037Z] ----------------------------------------------------------------------
+[debug] [2020-12-23T00:52:01.039Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init
+[debug] [2020-12-23T00:52:01.039Z] CLI Version:   9.1.0
+[debug] [2020-12-23T00:52:01.039Z] Platform:      darwin
+[debug] [2020-12-23T00:52:01.039Z] Node Version:  v12.18.3
+[debug] [2020-12-23T00:52:01.040Z] Time:          Tue Dec 22 2020 16:52:01 GMT-0800 (Pacific Standard Time)
+[debug] [2020-12-23T00:52:01.040Z] ----------------------------------------------------------------------
+[debug] [2020-12-23T00:52:01.040Z] 
+[debug] [2020-12-23T00:52:01.042Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-12-23T00:52:01.043Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/kevin-miller/Documents/GitHub/firebase
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2020-12-23T00:52:09.501Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects?pageSize=100  
+ 
+[debug] [2020-12-23T00:52:09.766Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 23 Dec 2020 00:52:09 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  Using project practice-98633 (practice) 
+[info] 
+=== Database Setup
+[info] i  database: ensuring required API firebasedatabase.googleapis.com is enabled... 
+[debug] [2020-12-23T00:52:10.509Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/practice-98633/services/firebasedatabase.googleapis.com  
+ 
+[debug] [2020-12-23T00:52:10.927Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 23 Dec 2020 00:52:10 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] ✔  database: required API firebasedatabase.googleapis.com is enabled 
+[info] 
+[debug] [2020-12-23T00:52:10.928Z] >>> HTTP REQUEST GET https://firebasedatabase.googleapis.com/v1beta/projects/practice-98633/locations/-/instances/practice-98633-default-rtdb  
+ 
+[debug] [2020-12-23T00:52:11.235Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 23 Dec 2020 00:52:11 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] Firebase Realtime Database Security Rules allow you to define how your data should be
+[info] structured and when your data can be read from and written to.
+[info] 
+[info] Skipping overwrite of Realtime Database Security Rules.
+[info] The security rules defined in database.rules.json will be published when you run firebase deploy.
+[info] 
+=== Functions Setup
+[info] 
+[info] A functions directory will be created in your project with a Node.js
+[info] package pre-configured. Functions can be deployed with firebase deploy.
+[info] 
+[debug] [2020-12-23T00:52:18.734Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-12-23T00:52:18.735Z] > authorizing via signed-in user
+[debug] [2020-12-23T00:52:18.735Z] [iam] checking project practice-98633 for permissions ["firebase.projects.get"]
+[debug] [2020-12-23T00:52:18.735Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/practice-98633:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2020-12-23T00:52:19.078Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 23 Dec 2020 00:52:19 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=186","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-12-23T00:52:19.080Z] >>> HTTP REQUEST POST https://serviceusage.googleapis.com/v1/projects/practice-98633/services/cloudfunctions.googleapis.com:enable  
+ 
+[debug] [2020-12-23T00:52:19.080Z] >>> HTTP REQUEST POST https://serviceusage.googleapis.com/v1/projects/practice-98633/services/runtimeconfig.googleapis.com:enable  
+ 
+[debug] [2020-12-23T00:52:19.528Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 23 Dec 2020 00:52:19 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-12-23T00:52:20.058Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 23 Dec 2020 00:52:19 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] ✔  Wrote functions/package.json 
+[info] ✔  Wrote functions/.eslintrc.json 
+[info] ✔  Wrote functions/index.js 
+[info] ✔  Wrote functions/.gitignore 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2020-12-23T00:54:10.498Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2020-12-23T00:54:10.595Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2020-12-23T00:54:10.595Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"8.2.1","browserURL":"https://www.gstatic.com/firebasejs/8.2.1/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/8.2.1/firebase.tgz"},"live":{"version":"8.2","browserURL":"https://www.gstatic.com/firebasejs/live/8.2/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/8.2/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js","auth":"https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js","database":"https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js","firestore":"https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js","functions":"https://www.gstatic.com/firebasejs/8.2.1/firebase-functions.js","installations":"https://www.gstatic.com/firebasejs/8.2.1/firebase-installations.js","messaging":"https://www.gstatic.com/firebasejs/8.2.1/firebase-messaging.js","storage":"https://www.gstatic.com/firebasejs/8.2.1/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/8.2.1/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/8.2.1/firebase-remote-config.js","firestore.memory":"https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.memory.js"}}
+[info] i  Skipping write of public/index.html 
+[info] 
+[info] i  Detected a .git folder at /Users/kevin-miller/Documents/GitHub/firebase 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=521810038&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2020-12-23T00:54:29.984Z] >>> HTTP REQUEST POST https://github.com/login/oauth/access_token  
+ {"client_id":"89cf50f02ac6aaed3484","client_secret":"3330d14abc895d9a74d5f17cd7a00711fa2c5bf0","code":"154e7fec1e3b81a3e757","redirect_uri":"http://localhost:9005","state":"521810038"}
+[debug] [2020-12-23T00:54:30.460Z] <<< HTTP RESPONSE 200 {"date":"Wed, 23 Dec 2020 00:54:30 GMT","content-type":"application/json; charset=utf-8","transfer-encoding":"chunked","server":"GitHub.com","status":"200 OK","vary":"X-PJAX, Accept-Encoding, Accept, X-Requested-With, Accept-Encoding","etag":"W/\"5cb1a0468ca8fe34de14ed1f603a5f11\"","cache-control":"max-age=0, private, must-revalidate","strict-transport-security":"max-age=31536000; includeSubdomains; preload","x-frame-options":"deny","x-content-type-options":"nosniff","x-xss-protection":"1; mode=block","referrer-policy":"origin-when-cross-origin, strict-origin-when-cross-origin","expect-ct":"max-age=2592000, report-uri=\"https://api.github.com/_private/browser/errors\"","content-security-policy":"default-src 'none'; base-uri 'self'; block-all-mixed-content; connect-src 'self' uploads.github.com www.githubstatus.com collector.githubapp.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com; frame-ancestors 'none'; frame-src render.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com github-cloud.s3.amazonaws.com *.githubusercontent.com; manifest-src 'self'; media-src 'none'; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; worker-src github.com/socket-worker-5029ae85.js gist.github.com/socket-worker-5029ae85.js","x-github-request-id":"C4B4:8651:161578A:1DBF4D7:5FE29546"}
+[debug] [2020-12-23T00:54:30.460Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2020-12-23T00:54:30.906Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2020-12-23T00:54:30.907Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"Koldenblue","id":64618290,"node_id":"MDQ6VXNlcjY0NjE4Mjkw","avatar_url":"https://avatars2.githubusercontent.com/u/64618290?v=4","gravatar_id":"","url":"https://api.github.com/users/Koldenblue","html_url":"https://github.com/Koldenblue","followers_url":"https://api.github.com/users/Koldenblue/followers","following_url":"https://api.github.com/users/Koldenblue/following{/other_user}","gists_url":"https://api.github.com/users/Koldenblue/gists{/gist_id}","starred_url":"https://api.github.com/users/Koldenblue/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/Koldenblue/subscriptions","organizations_url":"https://api.github.com/users/Koldenblue/orgs","repos_url":"https://api.github.com/users/Koldenblue/repos","events_url":"https://api.github.com/users/Koldenblue/events{/privacy}","received_events_url":"https://api.github.com/users/Koldenblue/received_events","type":"User","site_admin":false,"name":"Kevin Miller","company":null,"blog":"https://www.linkedin.com/in/kevin-miller-phd-1b197986/","location":"Los Angeles","email":null,"hireable":true,"bio":"I enjoy designing web apps in JavaScript. I program in Python/C/C++ as well.\r\nI have a PhD in chemistry and teach gym fitness classes!","twitter_username":null,"public_repos":42,"public_gists":0,"followers":23,"following":24,"created_at":"2020-04-30T23:03:59Z","updated_at":"2020-12-23T00:54:29Z","private_gists":0,"total_private_repos":5,"owned_private_repos":5,"disk_usage":362746,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] ✔  Success! Logged into GitHub as Koldenblue 
+[info] 
+[debug] [2020-12-23T00:54:59.773Z] >>> [apiv2][query] GET https://api.github.com/repos/user/firebase/actions/secrets/public-key type=owner
+[debug] [2020-12-23T00:55:00.171Z] <<< [apiv2][status] GET https://api.github.com/repos/user/firebase/actions/secrets/public-key 404
+[debug] [2020-12-23T00:55:00.171Z] <<< [apiv2][body] GET https://api.github.com/repos/user/firebase/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2020-12-23T00:55:04.504Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2020-12-23T00:55:04.887Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2020-12-23T00:55:04.887Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2020-12-23T00:55:05.810Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2020-12-23T00:55:06.196Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2020-12-23T00:55:06.197Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}

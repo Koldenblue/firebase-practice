@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Uploader from './components/Uploader';
 import { useDispatch, useSelector } from 'react-redux';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Tweets from './components/Tweets'
+import Loading from './components/Loading';
 // Firebase App (the core Firebase SDK) is always required and
 // must be listed before other Firebase SDKs
 import firebase from "firebase/app";
@@ -15,8 +17,8 @@ import { selectDb, setDb } from './redux/firestoreSlice';
 
 function App() {
   const dispatch = useDispatch();
-  const [db, setDb] = useState()
-  const [tweets, setTweets] = useState(<></>)
+  const [db, setDb] = useState('')
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     console.log('init')
@@ -29,24 +31,33 @@ function App() {
       authDomain: 'practice-98633.firebaseapp.com',
       projectId: 'practice-98633'
     }
-    
+
     firebase.initializeApp(config);
     var initdb = firebase.firestore();
     console.log(initdb)
-    
+
     // db can now be passed as a prop to any child components. Note: redux can't do this, but perhaps context can.
     setDb(initdb)
     console.log('initialized firebase')
 
   }, [])
 
+  useEffect(() => {
+    console.log(loading)
+    if (loading && db !== '') {
+      setLoading(false)
+    }
+    
+  }, [loading, db])
 
   return (
-    <div className="App">
-      {/* <Uploader db={db}/> */}
-      <Tweets db={db} />
-    </div>
-  );
+    <Router>
+      <Switch>
+        <Route exact path='/'>
+          <Loading loading={loading} db={db} />
+        </Route>
+      </Switch>
+    </Router>
+  )
 }
-
 export default App;

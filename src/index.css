@@ -3,3 +3,10 @@
   left: 50%;
   top: 50%;
 }
+
+.dark-bg {
+  background-color: darkcyan;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}

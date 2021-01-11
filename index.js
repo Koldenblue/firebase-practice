@@ -1,6 +1,9 @@
 // firebase tutorial vid:
 // https://firebase.google.com/docs/storage/web/start?authuser=0
 
+
+// index.js for upload.html
+// uses realtime storage
 console.log('running')
 
 let uploader = document.getElementById('uploader');

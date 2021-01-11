@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-
+// import helloWorld from '../../functions'
 
 export default function Uploader() {
   const fileRef = useRef()

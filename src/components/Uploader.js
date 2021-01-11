@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 // import helloWorld from '../../functions'
 
-export default function Uploader() {
+export default function Uploader(props) {
   const fileRef = useRef()
 
   const handleSubmit = (event) => {
@@ -13,6 +13,7 @@ export default function Uploader() {
     console.log(fileRef.current.files[0])
 
   }
+  console.log(props.db)
 
 
   return (<>

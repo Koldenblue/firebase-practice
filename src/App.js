@@ -10,6 +10,7 @@ import firebase from "firebase/app";
 // Add the Firebase services that you want to use
 import "firebase/auth";
 import "firebase/firestore";
+import Update from './components/Update';
 
 // cannot set functions as redux state
 // import { selectDb, setDb } from './redux/firestoreSlice';
@@ -53,6 +54,12 @@ function App() {
         <Route exact path='/'>
           <Loading loading={loading} db={db}>
             <Tweets db={db} />
+          </Loading>
+        </Route>
+
+        <Route exact path='/update'>
+          <Loading loading={loading} db={db}>
+            <Update db={db}/>
           </Loading>
         </Route>
 

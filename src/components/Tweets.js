@@ -5,7 +5,7 @@ export default function Tweets(props) {
   useEffect(() => {
     console.log(props.db)
     if (props.db !== undefined) {
-      // add a document to the collection
+      // add a document to the collection. add() uses an auto-generated id, which differs from set()
       // documents can also contain further subcollections, and vice versa. But documents and collections mush alternate
       props.db.collection('tweets').add({
         id: 'author id goes here',

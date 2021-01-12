@@ -11,12 +11,10 @@ import firebase from "firebase/app";
 import "firebase/auth";
 import "firebase/firestore";
 
-
 // cannot set functions as redux state
-import { selectDb, setDb } from './redux/firestoreSlice';
+// import { selectDb, setDb } from './redux/firestoreSlice';
 
 function App() {
-  const dispatch = useDispatch();
   const [db, setDb] = useState('')
   const [loading, setLoading] = useState(true);
 
@@ -39,7 +37,6 @@ function App() {
     // db can now be passed as a prop to any child components. Note: redux can't do this, but perhaps context can.
     setDb(initdb)
     console.log('initialized firebase')
-
   }, [])
 
   useEffect(() => {
@@ -47,15 +44,18 @@ function App() {
     if (loading && db !== '') {
       setLoading(false)
     }
-    
   }, [loading, db])
 
   return (
     <Router>
       <Switch>
+
         <Route exact path='/'>
-          <Loading loading={loading} db={db} />
+          <Loading loading={loading} db={db}>
+            <Tweets db={db} />
+          </Loading>
         </Route>
+
       </Switch>
     </Router>
   )

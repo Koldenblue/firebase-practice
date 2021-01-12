@@ -1,18 +1,11 @@
 import React, { useEffect } from 'react';
-import Uploader from './Uploader';
-import Tweets from './Tweets'
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-export default function Loading({ loading, db }) {
+export default function Loading({ loading, db, ...rest }) {
 
   useEffect(() => {
     console.log(loading)
   }, [loading])
 
-  return loading ? (<h1>LOADING</h1>) :
-    (
-      <div className="App">
-        {/* <Uploader db={db}/> */}
-        <Tweets db={db} />
-      </div>
-    )
+  return loading ? (<h1>LOADING</h1>) : (<Route {...rest} />);
 }

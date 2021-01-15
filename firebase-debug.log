@@ -155,3 +155,30 @@ INFO: Detected HTTP/2 connection.
  {"metadata":{"emulator":{"name":"firestore"},"message":"Jan 11, 2021 10:19:14 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected HTTP/2 connection.\n"}}
 [debug] [2021-01-12T06:19:14.850Z] <<< HTTP RESPONSE 200 {"content-type":"application/json","content-length":"4"}
 [info] ✔  functions[makeUppercase]: firestore function initialized. {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mfirestore\u001b[22m function initialized."}}
+[debug] [2021-01-15T02:40:09.157Z] ----------------------------------------------------------------------
+[debug] [2021-01-15T02:40:09.160Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\notso\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2021-01-15T02:40:09.161Z] CLI Version:   9.1.0
+[debug] [2021-01-15T02:40:09.161Z] Platform:      win32
+[debug] [2021-01-15T02:40:09.161Z] Node Version:  v12.17.0
+[debug] [2021-01-15T02:40:09.167Z] Time:          Thu Jan 14 2021 18:40:09 GMT-0800 (Pacific Standard Time)
+[debug] [2021-01-15T02:40:09.167Z] ----------------------------------------------------------------------
+[debug] [2021-01-15T02:40:09.168Z] 
+[debug] [2021-01-15T02:40:09.172Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2021-01-15T02:40:09.198Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-01-15T02:40:09.199Z] > authorizing via signed-in user
+[info] i  emulators: Starting emulators: functions, firestore, database, hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions, firestore, database, hosting"}}
+[debug] [2021-01-15T02:40:09.477Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2021-01-15T02:40:09.477Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2021-01-15T02:40:11.260Z] [hub] writing locator at C:\Users\notso\AppData\Local\Temp\hub-practice-98633.json
+[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, pubsub {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, pubsub\u001b[22m"}}
+[info] +  functions: Using node@12 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Using node@12 from host."}}
+[debug] [2021-01-15T02:40:13.354Z] defaultcredentials: writing to file C:\Users\notso\AppData\Roaming\firebase\klmille_gmail_com_application_default_credentials.json
+[debug] [2021-01-15T02:40:13.359Z] Setting GAC to C:\Users\notso\AppData\Roaming\firebase\klmille_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\notso\\AppData\\Roaming\\firebase\\klmille_gmail_com_application_default_credentials.json"}}
+[info] i  firestore: downloading cloud-firestore-emulator-v1.11.11.jar... {"metadata":{"emulator":{"name":"firestore"},"message":"downloading cloud-firestore-emulator-v1.11.11.jar..."}}
+[debug] [2021-01-15T02:40:15.497Z] >>> [apiv2][query] GET https://storage.googleapis.com/firebase-preview-drop/emulator/cloud-firestore-emulator-v1.11.11.jar [none]
+[debug] [2021-01-15T02:40:15.699Z] <<< [apiv2][status] GET https://storage.googleapis.com/firebase-preview-drop/emulator/cloud-firestore-emulator-v1.11.11.jar 200
+[debug] [2021-01-15T02:40:15.700Z] <<< [apiv2][body] GET https://storage.googleapis.com/firebase-preview-drop/emulator/cloud-firestore-emulator-v1.11.11.jar [stream]
+[debug] [2021-01-15T02:40:17.892Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: projectId"}}
+[debug] [2021-01-15T02:40:17.896Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2021-01-15T02:40:17.896Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","C:\\Users\\notso\\.cache\\firebase\\emulators\\cloud-firestore-emulator-v1.11.11.jar","--host","localhost","--port",8080,"--rules","A:\\JavaScript Projects\\firebase-practice\\firestore.rules","--functions_emulator","localhost:5001"],"optionalArgs":["port","webchannel_port","host","rules","functions_emulator","seed_from_export"],"joinArgs":false} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"C:\\\\Users\\\\notso\\\\.cache\\\\firebase\\\\emulators\\\\cloud-firestore-emulator-v1.11.11.jar\",\"--host\",\"localhost\",\"--port\",8080,\"--rules\",\"A:\\\\JavaScript Projects\\\\firebase-practice\\\\firestore.rules\",\"--functions_emulator\",\"localhost:5001\"],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"functions_emulator\",\"seed_from_export\"],\"joinArgs\":false}"}}
+[info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}

@@ -23,12 +23,11 @@ export default function Tweets(props) {
       })
     }
 
-    // local host for emulation of cloud functions, using the 
+    // local host for emulation of cloud functions, using "firebase emulators:start"
     axios.get("http://localhost:5001/practice-98633/us-central1/helloWorld").then(res => {
       console.log(res);
     }).catch(err => console.error(err))
 
-    // also have to be able to update the likes array
   }, [])
 
   console.log(props.db)

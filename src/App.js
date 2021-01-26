@@ -11,7 +11,7 @@ import firebase from "firebase/app";
 import "firebase/auth";
 import "firebase/firestore";
 import Update from './components/Update';
-
+require("dotenv").config();
 // cannot set functions as redux state
 // import { selectDb, setDb } from './redux/firestoreSlice';
 
@@ -26,6 +26,7 @@ function App() {
 
     console.log('initializing')
     var config = {
+      // doesn't have to be secret, see https://firebase.google.com/docs/projects/api-keys
       apiKey: 'AIzaSyBUpH72-HtwHUmFUYFFgq79OBfC4mzrKLA',
       authDomain: 'practice-98633.firebaseapp.com',
       projectId: 'practice-98633'
